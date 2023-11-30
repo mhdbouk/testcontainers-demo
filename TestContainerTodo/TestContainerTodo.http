@@ -1,0 +1,30 @@
+@HostAddress = https://localhost:7209
+
+GET {{HostAddress}}/todo/
+Accept: application/json
+
+###
+
+GET {{HostAddress}}/todo/1
+Accept: application/json
+
+###
+
+POST {{HostAddress}}/todo
+Content-Type: application/json
+
+{
+  "title": "todo item"
+}
+
+###
+
+PUT {{HostAddress}}/todo/1
+Content-Type: application/json
+
+{
+  "title": "todo item 1 updated",
+  "isCompleted": true
+}
+
+###
